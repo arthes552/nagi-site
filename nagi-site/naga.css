@@ -1,0 +1,64 @@
+body {
+ margin: 0;
+ font-family: 'Segoe UI', sans-serif;
+ background: linear-gradient(180deg, #02131f, #052d3d, #063a4f);
+ color: white;
+ overflow-x: hidden;
+}
+
+/* Анимированный эффект воды */
+body::before {
+ content: "";
+ position: fixed;
+ width: 200%;
+ height: 200%;
+ background: radial-gradient(circle at 30% 30%, rgba(0,255,255,0.1), transparent 40%),
+ radial-gradient(circle at 70% 70%, rgba(0,150,255,0.1), transparent 40%);
+ animation: waterMove 15s infinite linear;
+ z-index: -1;
+}
+
+@keyframes waterMove {
+ from { transform: translate(0,0); }
+ to { transform: translate(-200px,-200px); }
+}.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+ }
+
+.hero-img {
+ width: 350px;
+ transition: 0.5s;
+}
+
+.hero-img:hover {
+ transform: scale(1.1);
+ filter: drop-shadow(0 0 20px cyan);
+}.abilities {
+  text-align: center;
+  padding: 40px 20px;
+ }
+
+.ability-card {
+ background: rgba(0, 0, 0, 0.4);
+ border: 1px solid rgba(0,255,255,0.3);
+ border-radius: 15px;
+ padding: 20px;
+ margin: 20px auto;
+ width: 300px;
+ transition: 0.4s;
+}
+
+.ability-card:hover {
+ transform: translateY(-10px);
+ box-shadow: 0 0 20px cyan;
+}.lore {
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+ }<head>
+<meta charset="UTF-8">
+<title>Naga Siren</title>
+<link rel="stylesheet" href="naga.css">
+</head>
