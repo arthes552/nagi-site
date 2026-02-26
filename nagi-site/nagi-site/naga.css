@@ -1,0 +1,69 @@
+/* Сбросим отступы и растянем фон на весь экран */
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url("images/nagi-bg.jpg"); /* твой фон */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Персонаж с анимацией появления */
+.nagi {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50px);
+    opacity: 0;
+    transition: all 1.5s ease-out;
+}
+
+/* Класс, который активируется при загрузке */
+body.loaded .nagi {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+/* Анимированный эффект воды */
+body::before {
+ content: "";
+ position: fixed;
+ width: 200%;
+ height: 200%;
+ background: radial-gradient(circle at 30% 30%, rgba(0,255,255,0.1), transparent 40%),
+ radial-gradient(circle at 70% 70%, rgba(0,150,255,0.1), transparent 40%);
+ animation: waterMove 15s infinite linear;
+ z-index: -1;
+}
+
+@keyframes waterMove {
+ from { transform: translate(0,0); }
+ to { transform: translate(-200px,-200px); }
+}.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+ }
+
+.hero-img {
+ width: 350px;
+ transition: 0.5s;
+}
+
+.hero-img:hover {
+ transform: scale(1.1);
+ filter: drop-shadow(0 0 20px cyan);
+}.abilities {
+  text-align: center;
+  padding: 40px 20px;
+ }
+
+.ability-card {
+ background: rgba(0, 0, 0, 0.4);
+ border: 1px solid rgba(0,255,255,0.3);
+ border-radius: 15px;
+ padding: 20px;
+ margin: 20px auto;
+ width: 300px;
+ transition: 0.4s;
+}
+
+
