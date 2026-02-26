@@ -1,11 +1,28 @@
+/* Сбросим отступы и растянем фон на весь экран */
 body {
- margin: 0;
- font-family: 'Segoe UI', sans-serif;
- background: linear-gradient(180deg, #02131f, #052d3d, #063a4f);
- color: white;
- overflow-x: hidden;
+    margin: 0;
+    height: 100vh;
+    background-image: url("images/nagi-bg.jpg"); /* твой фон */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
+/* Персонаж с анимацией появления */
+.nagi {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50px);
+    opacity: 0;
+    transition: all 1.5s ease-out;
+}
+
+/* Класс, который активируется при загрузке */
+body.loaded .nagi {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
 /* Анимированный эффект воды */
 body::before {
  content: "";
@@ -49,16 +66,4 @@ body::before {
  transition: 0.4s;
 }
 
-.ability-card:hover {
- transform: translateY(-10px);
- box-shadow: 0 0 20px cyan;
-}.lore {
-  padding: 40px 20px;
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
- }<head>
-<meta charset="UTF-8">
-<title>Naga Siren</title>
-<link rel="stylesheet" href="naga.css">
-</head>
+

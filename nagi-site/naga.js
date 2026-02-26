@@ -47,4 +47,6 @@ window.addEventListener("scroll", () => {
             card.style.transform = "translateY(0)";
         }, 300);
     });
+});window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
 });
