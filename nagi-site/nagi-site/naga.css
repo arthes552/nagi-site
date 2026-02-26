@@ -65,5 +65,8 @@ body::before {
  width: 300px;
  transition: 0.4s;
 }
-
-
+body {
+    background-image: url('images/nagi.jpg');
+    background-size: cover; /* растягивает на весь экран */
+    background-position: center;
+}
